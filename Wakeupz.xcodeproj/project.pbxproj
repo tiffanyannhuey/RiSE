@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E916043B1E7CA66F00EC7002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E916043A1E7CA66F00EC7002 /* AppDelegate.swift */; };
+		E916043D1E7CA66F00EC7002 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E916043C1E7CA66F00EC7002 /* ViewController.swift */; };
+		E91604401E7CA66F00EC7002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E916043E1E7CA66F00EC7002 /* Main.storyboard */; };
+		E91604431E7CA66F00EC7002 /* Wakeupz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E91604411E7CA66F00EC7002 /* Wakeupz.xcdatamodeld */; };
+		E91604451E7CA66F00EC7002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91604441E7CA66F00EC7002 /* Assets.xcassets */; };
+		E91604481E7CA66F00EC7002 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91604461E7CA66F00EC7002 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E91604371E7CA66F00EC7002 /* Wakeupz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wakeupz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E916043A1E7CA66F00EC7002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E916043C1E7CA66F00EC7002 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E916043F1E7CA66F00EC7002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E91604421E7CA66F00EC7002 /* Wakeupz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wakeupz.xcdatamodel; sourceTree = "<group>"; };
+		E91604441E7CA66F00EC7002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E91604471E7CA66F00EC7002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E91604491E7CA66F00EC7002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E91604341E7CA66F00EC7002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E916042E1E7CA66F00EC7002 = {
+			isa = PBXGroup;
+			children = (
+				E91604391E7CA66F00EC7002 /* Wakeupz */,
+				E91604381E7CA66F00EC7002 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E91604381E7CA66F00EC7002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E91604371E7CA66F00EC7002 /* Wakeupz.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E91604391E7CA66F00EC7002 /* Wakeupz */ = {
+			isa = PBXGroup;
+			children = (
+				E916043A1E7CA66F00EC7002 /* AppDelegate.swift */,
+				E916043C1E7CA66F00EC7002 /* ViewController.swift */,
+				E916043E1E7CA66F00EC7002 /* Main.storyboard */,
+				E91604441E7CA66F00EC7002 /* Assets.xcassets */,
+				E91604461E7CA66F00EC7002 /* LaunchScreen.storyboard */,
+				E91604491E7CA66F00EC7002 /* Info.plist */,
+				E91604411E7CA66F00EC7002 /* Wakeupz.xcdatamodeld */,
+			);
+			path = Wakeupz;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E91604361E7CA66F00EC7002 /* Wakeupz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E916044C1E7CA66F00EC7002 /* Build configuration list for PBXNativeTarget "Wakeupz" */;
+			buildPhases = (
+				E91604331E7CA66F00EC7002 /* Sources */,
+				E91604341E7CA66F00EC7002 /* Frameworks */,
+				E91604351E7CA66F00EC7002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wakeupz;
+			productName = Wakeupz;
+			productReference = E91604371E7CA66F00EC7002 /* Wakeupz.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E916042F1E7CA66F00EC7002 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = F4;
+				TargetAttributes = {
+					E91604361E7CA66F00EC7002 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = WPA2DJBB48;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E91604321E7CA66F00EC7002 /* Build configuration list for PBXProject "Wakeupz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E916042E1E7CA66F00EC7002;
+			productRefGroup = E91604381E7CA66F00EC7002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E91604361E7CA66F00EC7002 /* Wakeupz */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E91604351E7CA66F00EC7002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E91604481E7CA66F00EC7002 /* LaunchScreen.storyboard in Resources */,
+				E91604451E7CA66F00EC7002 /* Assets.xcassets in Resources */,
+				E91604401E7CA66F00EC7002 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E91604331E7CA66F00EC7002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E91604431E7CA66F00EC7002 /* Wakeupz.xcdatamodeld in Sources */,
+				E916043D1E7CA66F00EC7002 /* ViewController.swift in Sources */,
+				E916043B1E7CA66F00EC7002 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E916043E1E7CA66F00EC7002 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E916043F1E7CA66F00EC7002 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E91604461E7CA66F00EC7002 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E91604471E7CA66F00EC7002 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E916044A1E7CA66F00EC7002 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E916044B1E7CA66F00EC7002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E916044D1E7CA66F00EC7002 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WPA2DJBB48;
+				INFOPLIST_FILE = Wakeupz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.f4.Wakeupz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E916044E1E7CA66F00EC7002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WPA2DJBB48;
+				INFOPLIST_FILE = Wakeupz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.f4.Wakeupz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E91604321E7CA66F00EC7002 /* Build configuration list for PBXProject "Wakeupz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E916044A1E7CA66F00EC7002 /* Debug */,
+				E916044B1E7CA66F00EC7002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E916044C1E7CA66F00EC7002 /* Build configuration list for PBXNativeTarget "Wakeupz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E916044D1E7CA66F00EC7002 /* Debug */,
+				E916044E1E7CA66F00EC7002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E91604411E7CA66F00EC7002 /* Wakeupz.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E91604421E7CA66F00EC7002 /* Wakeupz.xcdatamodel */,
+			);
+			currentVersion = E91604421E7CA66F00EC7002 /* Wakeupz.xcdatamodel */;
+			path = Wakeupz.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E916042F1E7CA66F00EC7002 /* Project object */;
+}
