@@ -99,7 +99,7 @@
 				TargetAttributes = {
 					E91604361E7CA66F00EC7002 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 4JC5WJ423J;
+						DevelopmentTeam = WPA2DJBB48;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -265,7 +265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4JC5WJ423J;
+				DEVELOPMENT_TEAM = WPA2DJBB48;
 				INFOPLIST_FILE = Wakeupz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.f4.Wakeupz;
@@ -278,7 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4JC5WJ423J;
+				DEVELOPMENT_TEAM = WPA2DJBB48;
 				INFOPLIST_FILE = Wakeupz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.f4.Wakeupz;
