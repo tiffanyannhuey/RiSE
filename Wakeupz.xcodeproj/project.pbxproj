@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54B3513F1E7DFA83009C366A /* IndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3513E1E7DFA83009C366A /* IndexTableViewController.swift */; };
 		E916043B1E7CA66F00EC7002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E916043A1E7CA66F00EC7002 /* AppDelegate.swift */; };
 		E916043D1E7CA66F00EC7002 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E916043C1E7CA66F00EC7002 /* ViewController.swift */; };
 		E91604401E7CA66F00EC7002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E916043E1E7CA66F00EC7002 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54B3513E1E7DFA83009C366A /* IndexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTableViewController.swift; sourceTree = "<group>"; };
 		E91604371E7CA66F00EC7002 /* Wakeupz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wakeupz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E916043A1E7CA66F00EC7002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E916043C1E7CA66F00EC7002 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				E91604461E7CA66F00EC7002 /* LaunchScreen.storyboard */,
 				E91604491E7CA66F00EC7002 /* Info.plist */,
 				E91604411E7CA66F00EC7002 /* Wakeupz.xcdatamodeld */,
+				54B3513E1E7DFA83009C366A /* IndexTableViewController.swift */,
 			);
 			path = Wakeupz;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54B3513F1E7DFA83009C366A /* IndexTableViewController.swift in Sources */,
 				E91604431E7CA66F00EC7002 /* Wakeupz.xcdatamodeld in Sources */,
 				E916043D1E7CA66F00EC7002 /* ViewController.swift in Sources */,
 				E916043B1E7CA66F00EC7002 /* AppDelegate.swift in Sources */,
