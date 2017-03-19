@@ -244,9 +244,6 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <textInputTraits key="textInputTraits"/>
-                                            <connections>
-                                                <segue destination="Sti-gd-2al" kind="show" identifier="editAlarm" id="BcK-io-5Ru"/>
-                                            </connections>
                                         </textField>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -254,6 +251,7 @@
                                 <connections>
                                     <outlet property="placeField" destination="N2I-hw-zce" id="DPs-UE-0Dq"/>
                                     <outlet property="timeLabel" destination="f7C-tM-kWc" id="eHA-ls-4c1"/>
+                                    <segue destination="Sti-gd-2al" kind="show" identifier="editAlarm" id="lnA-8L-ZxJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -309,7 +307,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ewn-tY-xHp" kind="relationship" relationship="rootViewController" id="CZk-Hh-VSd"/>
+                        <segue destination="ewn-tY-xHp" kind="relationship" relationship="rootViewController" id="Y2g-zV-p4C"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51C-JU-yHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
