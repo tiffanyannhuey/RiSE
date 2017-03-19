@@ -13,6 +13,9 @@
 		54B351451E7E0F45009C366A /* editAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B351441E7E0F45009C366A /* editAlarmViewController.swift */; };
 		54B351491E7E1F6E009C366A /* ObligationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B351481E7E1F6E009C366A /* ObligationTableViewController.swift */; };
 		54B3514D1E7E2432009C366A /* CustomRouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3514C1E7E2432009C366A /* CustomRouteCell.swift */; };
+		54B351511E7F082A009C366A /* createAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B351501E7F082A009C366A /* createAlarmViewController.swift */; };
+		54B351531E7F180C009C366A /* editObligationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B351521E7F180C009C366A /* editObligationViewController.swift */; };
+		B25549E31E7F1D3C00265A2C /* CreateObligationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25549E21E7F1D3C00265A2C /* CreateObligationViewController.swift */; };
 		E916043B1E7CA66F00EC7002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E916043A1E7CA66F00EC7002 /* AppDelegate.swift */; };
 		E91604401E7CA66F00EC7002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E916043E1E7CA66F00EC7002 /* Main.storyboard */; };
 		E91604431E7CA66F00EC7002 /* Wakeupz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E91604411E7CA66F00EC7002 /* Wakeupz.xcdatamodeld */; };
@@ -26,6 +29,9 @@
 		54B351441E7E0F45009C366A /* editAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editAlarmViewController.swift; sourceTree = "<group>"; };
 		54B351481E7E1F6E009C366A /* ObligationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObligationTableViewController.swift; sourceTree = "<group>"; };
 		54B3514C1E7E2432009C366A /* CustomRouteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRouteCell.swift; sourceTree = "<group>"; };
+		54B351501E7F082A009C366A /* createAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createAlarmViewController.swift; sourceTree = "<group>"; };
+		54B351521E7F180C009C366A /* editObligationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editObligationViewController.swift; sourceTree = "<group>"; };
+		B25549E21E7F1D3C00265A2C /* CreateObligationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateObligationViewController.swift; sourceTree = "<group>"; };
 		E91604371E7CA66F00EC7002 /* Wakeupz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wakeupz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E916043A1E7CA66F00EC7002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E916043F1E7CA66F00EC7002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +81,9 @@
 				54B351441E7E0F45009C366A /* editAlarmViewController.swift */,
 				54B351481E7E1F6E009C366A /* ObligationTableViewController.swift */,
 				54B3514C1E7E2432009C366A /* CustomRouteCell.swift */,
+				54B351501E7F082A009C366A /* createAlarmViewController.swift */,
+				54B351521E7F180C009C366A /* editObligationViewController.swift */,
+				B25549E21E7F1D3C00265A2C /* CreateObligationViewController.swift */,
 			);
 			path = Wakeupz;
 			sourceTree = "<group>";
@@ -152,10 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B25549E31E7F1D3C00265A2C /* CreateObligationViewController.swift in Sources */,
 				54B3513F1E7DFA83009C366A /* IndexTableViewController.swift in Sources */,
 				54B351431E7DFD61009C366A /* CustomIndexCell.swift in Sources */,
+				54B351511E7F082A009C366A /* createAlarmViewController.swift in Sources */,
 				E91604431E7CA66F00EC7002 /* Wakeupz.xcdatamodeld in Sources */,
 				54B351451E7E0F45009C366A /* editAlarmViewController.swift in Sources */,
+				54B351531E7F180C009C366A /* editObligationViewController.swift in Sources */,
 				54B3514D1E7E2432009C366A /* CustomRouteCell.swift in Sources */,
 				E916043B1E7CA66F00EC7002 /* AppDelegate.swift in Sources */,
 				54B351491E7E1F6E009C366A /* ObligationTableViewController.swift in Sources */,

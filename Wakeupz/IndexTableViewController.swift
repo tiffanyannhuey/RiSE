@@ -17,7 +17,7 @@ class IndexTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+   
         return places.count 
     }
 
@@ -25,7 +25,7 @@ class IndexTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "indexCell", for: indexPath) as! CustomIndexCell
 
-        // Configure the cell...
+
         cell.placeField.text = places[indexPath.row]
         cell.timeLabel.text = times[indexPath.row]
         
@@ -40,8 +40,7 @@ class IndexTableViewController: UITableViewController {
         }
     }
     
-    
-  
+ 
 
 
 }
