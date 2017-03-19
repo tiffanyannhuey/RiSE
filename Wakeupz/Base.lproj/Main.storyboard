@@ -82,6 +82,7 @@
                                 <connections>
                                     <outlet property="locationAddress" destination="OUW-hK-frg" id="XUR-Yq-faL"/>
                                     <outlet property="locationName" destination="7LL-qX-ArS" id="cJc-Qy-biR"/>
+                                    <segue destination="yEX-CJ-0iQ" kind="show" identifier="editObligation" id="ejd-XR-TCf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
