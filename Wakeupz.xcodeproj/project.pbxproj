@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FC6463A1E7EFCC500FB2F05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC646391E7EFCC500FB2F05 /* LaunchScreen.storyboard */; };
 		54B3513F1E7DFA83009C366A /* IndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3513E1E7DFA83009C366A /* IndexTableViewController.swift */; };
 		54B351431E7DFD61009C366A /* CustomIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B351421E7DFD61009C366A /* CustomIndexCell.swift */; };
 		54B351451E7E0F45009C366A /* editAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B351441E7E0F45009C366A /* editAlarmViewController.swift */; };
@@ -16,10 +17,10 @@
 		E91604401E7CA66F00EC7002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E916043E1E7CA66F00EC7002 /* Main.storyboard */; };
 		E91604431E7CA66F00EC7002 /* Wakeupz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E91604411E7CA66F00EC7002 /* Wakeupz.xcdatamodeld */; };
 		E91604451E7CA66F00EC7002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91604441E7CA66F00EC7002 /* Assets.xcassets */; };
-		E91604481E7CA66F00EC7002 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91604461E7CA66F00EC7002 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FC646391E7EFCC500FB2F05 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54B3513E1E7DFA83009C366A /* IndexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTableViewController.swift; sourceTree = "<group>"; };
 		54B351421E7DFD61009C366A /* CustomIndexCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomIndexCell.swift; sourceTree = "<group>"; };
 		54B351441E7E0F45009C366A /* editAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editAlarmViewController.swift; sourceTree = "<group>"; };
@@ -30,7 +31,6 @@
 		E916043F1E7CA66F00EC7002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E91604421E7CA66F00EC7002 /* Wakeupz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wakeupz.xcdatamodel; sourceTree = "<group>"; };
 		E91604441E7CA66F00EC7002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E91604471E7CA66F00EC7002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E91604491E7CA66F00EC7002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,9 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				E916043A1E7CA66F00EC7002 /* AppDelegate.swift */,
+				0FC646391E7EFCC500FB2F05 /* LaunchScreen.storyboard */,
 				E916043E1E7CA66F00EC7002 /* Main.storyboard */,
 				E91604441E7CA66F00EC7002 /* Assets.xcassets */,
-				E91604461E7CA66F00EC7002 /* LaunchScreen.storyboard */,
 				E91604491E7CA66F00EC7002 /* Info.plist */,
 				E91604411E7CA66F00EC7002 /* Wakeupz.xcdatamodeld */,
 				54B3513E1E7DFA83009C366A /* IndexTableViewController.swift */,
@@ -139,7 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E91604481E7CA66F00EC7002 /* LaunchScreen.storyboard in Resources */,
+				0FC6463A1E7EFCC500FB2F05 /* LaunchScreen.storyboard in Resources */,
 				E91604451E7CA66F00EC7002 /* Assets.xcassets in Resources */,
 				E91604401E7CA66F00EC7002 /* Main.storyboard in Resources */,
 			);
@@ -171,14 +171,6 @@
 				E916043F1E7CA66F00EC7002 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E91604461E7CA66F00EC7002 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E91604471E7CA66F00EC7002 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -281,6 +273,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = WPA2DJBB48;
 				INFOPLIST_FILE = Wakeupz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -294,6 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = WPA2DJBB48;
 				INFOPLIST_FILE = Wakeupz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
