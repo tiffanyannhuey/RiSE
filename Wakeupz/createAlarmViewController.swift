@@ -13,6 +13,7 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var picker: UIPickerView!
     
     var places = ["DBC", "Home", "Work", "Gym", "Church" ]
+    var placeSelection = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,15 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        placeSelection = row
+    }
+    
+    @IBOutlet func Submit(sender: AnyObject) {
+        if (placeSelection == 0) {
+        }
     }
 
    
