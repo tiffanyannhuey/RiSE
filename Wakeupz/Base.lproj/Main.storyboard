@@ -31,13 +31,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.10588235294117647" green="0.082352941176470587" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <connections>
-                        <segue destination="4Xv-HM-ztd" kind="show" id="XCU-U1-WqM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1N-9N-Tm7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3559" y="1363"/>
+            <point key="canvasLocation" x="4556.25" y="1362.6760563380283"/>
         </scene>
         <!--Obligation Table View Controller-->
         <scene sceneID="3SC-LR-fsU">
@@ -92,14 +89,11 @@
                             <outlet property="delegate" destination="4Xv-HM-ztd" id="Vwy-ny-2XM"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="yEX-CJ-0iQ" kind="show" id="CVB-Ba-xsd"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6P-Lj-qsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="u0D-mD-oAk"/>
             </objects>
-            <point key="canvasLocation" x="4479" y="1363"/>
+            <point key="canvasLocation" x="5475" y="1362.6760563380283"/>
         </scene>
         <!--Edit Obligation View Controller-->
         <scene sceneID="dzA-8A-uQq">
@@ -126,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w77-e1-54F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5438" y="1363"/>
+            <point key="canvasLocation" x="6435" y="1362.6760563380283"/>
         </scene>
         <!--Create Alarm View Controller-->
         <scene sceneID="j3E-oB-Tsl">
@@ -157,10 +151,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.10588235294117647" green="0.082352941176470587" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="SwP-x9-buh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooN-Ky-AIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2626.875" y="1362.6760563380283"/>
+            <point key="canvasLocation" x="3624.375" y="1362.6760563380283"/>
         </scene>
         <!--Home-->
         <scene sceneID="oRU-bf-kyO">
@@ -221,7 +216,7 @@
                     <navigationItem key="navigationItem" title="Home" id="zOx-z0-bY7">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Yns-Oh-0jH">
                             <connections>
-                                <segue destination="eBG-UG-Rv6" kind="show" identifier="createAlarm" id="EZg-1V-lv6"/>
+                                <segue destination="Ie4-0k-xtA" kind="show" identifier="createAlarm" id="EZg-1V-lv6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -276,8 +271,23 @@
             </objects>
             <point key="canvasLocation" x="2626.875" y="534.50704225352115"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rWE-rv-Fdf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ie4-0k-xtA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="diU-VA-221">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eBG-UG-Rv6" kind="relationship" relationship="rootViewController" id="6fC-Me-D7t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9p4-mw-nFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2626.875" y="1362.6760563380283"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="CVB-Ba-xsd"/>
-    </inferredMetricsTieBreakers>
 </document>
