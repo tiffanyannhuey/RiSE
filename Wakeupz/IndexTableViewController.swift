@@ -33,12 +33,14 @@ class IndexTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.places.remove(at: indexPath.row)
+            self.tableView.reloadData()
+        }
+    }
     
-   // override func viewWillAppear(_ animated: Bool) {
-   //     self.navigationController?.setNavigationBarHidden(false, animated: true)
-   // }
-    
-   
+ 
 
 
 }
