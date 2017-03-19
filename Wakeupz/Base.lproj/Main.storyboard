@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="1629" y="1363"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Obligation Table View Controller-->
         <scene sceneID="3SC-LR-fsU">
             <objects>
-                <tableViewController id="4Xv-HM-ztd" sceneMemberID="viewController">
+                <tableViewController id="4Xv-HM-ztd" customClass="ObligationTableViewController" customModule="Wakeupz" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nRN-8e-HUX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

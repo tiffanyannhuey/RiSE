@@ -10,7 +10,7 @@
 		54B3513F1E7DFA83009C366A /* IndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3513E1E7DFA83009C366A /* IndexTableViewController.swift */; };
 		54B351431E7DFD61009C366A /* CustomIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B351421E7DFD61009C366A /* CustomIndexCell.swift */; };
 		54B351451E7E0F45009C366A /* editAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B351441E7E0F45009C366A /* editAlarmViewController.swift */; };
-		54B351471E7E1A3D009C366A /* ObligationTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B351461E7E1A3D009C366A /* ObligationTableTableViewController.swift */; };
+		54B351491E7E1F6E009C366A /* ObligationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B351481E7E1F6E009C366A /* ObligationTableViewController.swift */; };
 		E916043B1E7CA66F00EC7002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E916043A1E7CA66F00EC7002 /* AppDelegate.swift */; };
 		E916043D1E7CA66F00EC7002 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E916043C1E7CA66F00EC7002 /* ViewController.swift */; };
 		E91604401E7CA66F00EC7002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E916043E1E7CA66F00EC7002 /* Main.storyboard */; };
@@ -23,7 +23,7 @@
 		54B3513E1E7DFA83009C366A /* IndexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTableViewController.swift; sourceTree = "<group>"; };
 		54B351421E7DFD61009C366A /* CustomIndexCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomIndexCell.swift; sourceTree = "<group>"; };
 		54B351441E7E0F45009C366A /* editAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editAlarmViewController.swift; sourceTree = "<group>"; };
-		54B351461E7E1A3D009C366A /* ObligationTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObligationTableTableViewController.swift; sourceTree = "<group>"; };
+		54B351481E7E1F6E009C366A /* ObligationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObligationTableViewController.swift; sourceTree = "<group>"; };
 		E91604371E7CA66F00EC7002 /* Wakeupz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wakeupz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E916043A1E7CA66F00EC7002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E916043C1E7CA66F00EC7002 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 				54B3513E1E7DFA83009C366A /* IndexTableViewController.swift */,
 				54B351421E7DFD61009C366A /* CustomIndexCell.swift */,
 				54B351441E7E0F45009C366A /* editAlarmViewController.swift */,
-				54B351461E7E1A3D009C366A /* ObligationTableTableViewController.swift */,
+				54B351481E7E1F6E009C366A /* ObligationTableViewController.swift */,
 			);
 			path = Wakeupz;
 			sourceTree = "<group>";
@@ -156,9 +156,9 @@
 				54B351431E7DFD61009C366A /* CustomIndexCell.swift in Sources */,
 				E91604431E7CA66F00EC7002 /* Wakeupz.xcdatamodeld in Sources */,
 				E916043D1E7CA66F00EC7002 /* ViewController.swift in Sources */,
-				54B351471E7E1A3D009C366A /* ObligationTableTableViewController.swift in Sources */,
 				54B351451E7E0F45009C366A /* editAlarmViewController.swift in Sources */,
 				E916043B1E7CA66F00EC7002 /* AppDelegate.swift in Sources */,
+				54B351491E7E1F6E009C366A /* ObligationTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
