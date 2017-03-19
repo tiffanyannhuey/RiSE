@@ -14,6 +14,12 @@ class CustomIndexCell: UITableViewCell {
     @IBOutlet weak var placeField: UITextField!
     
     @IBAction func `switch`(_ sender: UISwitch) {
+        if (sender.isOn == true ) {
+            print("You've put the alarm on!")
+        } else {
+            print("You turned off the alarm")
+        }
+        
     }
     
     
