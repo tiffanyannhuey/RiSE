@@ -245,7 +245,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
-                                                <segue destination="Sti-gd-2al" kind="show" id="BcK-io-5Ru"/>
+                                                <segue destination="Sti-gd-2al" kind="show" identifier="editAlarm" id="BcK-io-5Ru"/>
                                             </connections>
                                         </textField>
                                     </subviews>
@@ -271,10 +271,10 @@
             </objects>
             <point key="canvasLocation" x="2626.875" y="535.56338028169012"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Alarm View Controller-->
         <scene sceneID="FCJ-Af-Epb">
             <objects>
-                <viewController id="Sti-gd-2al" sceneMemberID="viewController">
+                <viewController id="Sti-gd-2al" customClass="editAlarmViewController" customModule="Wakeupz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Idk-i2-bLg"/>
                         <viewControllerLayoutGuide type="bottom" id="chQ-x2-dT0"/>
