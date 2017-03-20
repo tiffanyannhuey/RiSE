@@ -17,9 +17,8 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(backAction))
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(backAction))
         // Do any additional setup if required.
     }
     
@@ -29,8 +28,15 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     //Setup for location picker 
+
+//    let attributedString:NSAttributedString?
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+//            let attributedString = NSAttributedString(string: "\(places[row])", attributes: [NSForegroundColorAttributeName : UIColor.white])
+//            return attributedString
+//        }
+//        return attributedString
         return places[row]
     }
     
