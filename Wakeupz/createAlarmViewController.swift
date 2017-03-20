@@ -7,24 +7,46 @@
 //
 
 import UIKit
+import CoreData
 
 class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBOutlet weak var picker: UIPickerView!
     
-    var places = ["DBC", "Home", "Work", "Gym", "Church" ]
-    var placeSelection = 0
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    @IBOutlet weak var earliestWakeupTime: UIDatePicker!
+    @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var isOn: UISwitch!
+
+    var obligations: [Obligation] = []
+    
+    // var places = ["DBC", "Home", "Work", "Gym", "Church" ]
+    // var placeSelection = 0
+    var obligationSelection = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(backAction))
-        // Do any additional setup if required.
+        picker.dataSource = self
+        picker.delegate = self
+
+        earliestWakeupTime.backgroundColor = .white
+        
     }
     
-    func backAction(){
-        //print("Back Button Clicked")
-        dismiss(animated: true, completion: nil)
+    func getData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        do {
+            obligations = try context.fetch(Obligation.fetchRequest())
+        } catch {
+            print("Fetching failed")
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getData()
+        picker.reloadAllComponents()
     }
     
     //Setup for location picker 
@@ -32,16 +54,13 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
 //    let attributedString:NSAttributedString?
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-//            let attributedString = NSAttributedString(string: "\(places[row])", attributes: [NSForegroundColorAttributeName : UIColor.white])
-//            return attributedString
-//        }
-//        return attributedString
-        return places[row]
+        let obligation = obligations[row]
+        return obligation.name
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return places.count
+        //return places.count
+        return obligations.count
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -49,11 +68,34 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        placeSelection = row
+        // placeSelection = row
+        obligationSelection = row
     }
     
-    func Submit(sender: AnyObject) {
-        if (placeSelection == 0) {
+    func calculateWakeup() {
+        
+        /* algorithm for calculating wake up time. function should return wake up time to
+         to be stored in Core data */
+    }
+    
+    func setAlarmValues() {
+        let alarm = NSEntityDescription.insertNewObject(forEntityName: "Alarm", into: self.context)
+        
+        let updatedWakeupTime = calculateWakeup()
+        alarm.setValue(updatedWakeupTime, forKey: "calculatedWakeup")
+        alarm.setValue("false", forKey: "isOn")
+        alarm.setValue(earliestWakeupTime.date, forKey: "earliestWakeup")
+        
+    }
+    
+    @IBAction func handleAddNewAlarm(sender: UIButton) {
+        setAlarmValues()
+        
+        do {
+            try context.save()
+            print("hello")
+        } catch {
+            print("ooopsies didn't work")
         }
     }
 
