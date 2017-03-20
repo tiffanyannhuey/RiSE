@@ -17,7 +17,6 @@ class CreateObligationViewController: UIViewController {
     @IBOutlet weak var newObligationName: UITextField!
     @IBOutlet weak var myDatePicker: UIDatePicker!
     @IBOutlet weak var newAddress: UITextField!
-    // @IBOutlet weak var newEstimatedDriveDuration: UITextField! - must initialize this in the setObligationValues() function
     @IBOutlet weak var avgReadyDuration: UIDatePicker!
 
     
