@@ -30,26 +30,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="MTI-Fc-NBt">
-                                <rect key="frame" x="0.0" y="174" width="320" height="216"/>
+                                <rect key="frame" x="34" y="163" width="175" height="131"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="511724419.96075398">
                                     <!--2017-03-20 17:40:19 +0000-->
                                 </date>
                             </datePicker>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="address" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ijb-jg-TN4">
-                                <rect key="frame" x="112" y="409" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="estimated driving duration" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e8s-oc-Yp6">
-                                <rect key="frame" x="65" y="447" width="191" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qa-SE-ro2">
                                 <rect key="frame" x="75" y="495" width="134" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -58,8 +44,15 @@
                                     <action selector="handleAddNewObligation:" destination="tNi-AI-XtD" eventType="touchUpInside" id="AcQ-mo-LfQ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="avg ready duration" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ngv-fH-VqJ">
-                                <rect key="frame" x="124" y="360" width="142" height="30"/>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FFw-Wg-NYu">
+                                <rect key="frame" x="34" y="332" width="223" height="51"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="511738067.909096">
+                                    <!--2017-03-20 21:27:47 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="address" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ijb-jg-TN4">
+                                <rect key="frame" x="98" y="426" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -69,16 +62,15 @@
                         <color key="backgroundColor" red="0.10588235294117647" green="0.082352941176470587" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="avgReadyDuration" destination="ngv-fH-VqJ" id="dWq-oz-EXT"/>
+                        <outlet property="avgReadyDuration" destination="FFw-Wg-NYu" id="XNl-gI-JbA"/>
                         <outlet property="myDatePicker" destination="MTI-Fc-NBt" id="T8r-Pq-WAP"/>
                         <outlet property="newAddress" destination="Ijb-jg-TN4" id="0KB-Ii-Qlh"/>
-                        <outlet property="newEstimatedDriveDuration" destination="ngv-fH-VqJ" id="3eg-ii-blJ"/>
                         <outlet property="newObligationName" destination="hXV-Ad-tgx" id="CX9-Jd-O8Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1N-9N-Tm7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4856" y="1446"/>
+            <point key="canvasLocation" x="4854.375" y="1445.0704225352113"/>
         </scene>
         <!--Obligation Table View Controller-->
         <scene sceneID="3SC-LR-fsU">
@@ -93,18 +85,18 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Ie-9K-ygK" id="8ar-wx-s1S">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="68.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="68"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DBC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7LL-qX-ArS">
-                                            <rect key="frame" x="15" y="17" width="35" height="20.5"/>
+                                            <rect key="frame" x="15" y="16" width="35" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="707 Broadway Ave | San Diego, CA | 92101" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OUW-hK-frg">
-                                            <rect key="frame" x="15" y="37.5" width="239.5" height="14.5"/>
+                                            <rect key="frame" x="15" y="37" width="240" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <gestureRecognizers/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>

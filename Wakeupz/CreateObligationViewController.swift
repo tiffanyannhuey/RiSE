@@ -17,8 +17,8 @@ class CreateObligationViewController: UIViewController {
     @IBOutlet weak var newObligationName: UITextField!
     @IBOutlet weak var myDatePicker: UIDatePicker!
     @IBOutlet weak var newAddress: UITextField!
-    @IBOutlet weak var newEstimatedDriveDuration: UITextField!
-    @IBOutlet weak var avgReadyDuration: UITextField!
+    // @IBOutlet weak var newEstimatedDriveDuration: UITextField! - must initialize this in the setObligationValues() function
+    @IBOutlet weak var avgReadyDuration: UIDatePicker!
 
     
     override func viewDidLoad() {
@@ -38,14 +38,10 @@ class CreateObligationViewController: UIViewController {
         obligation.setValue(newObligationName.text, forKey: "name")
     
         obligation.setValue(newAddress.text, forKey: "address")
-        
-        let stringEstDriveDuration = newEstimatedDriveDuration.text
-        let intEstDriveDuration = Int(stringEstDriveDuration!)
-        obligation.setValue(intEstDriveDuration, forKey: "estimatedDrivingDuration")
     
-        let stringAvgReadyTime = avgReadyDuration.text
-        let intAvgReadyTime = Int(stringAvgReadyTime!)
-        obligation.setValue(intAvgReadyTime, forKey: "avgReadyTime")
+        // set estimatedDrivingDuration value here
+
+        obligation.setValue(avgReadyDuration.countDownDuration, forKey: "avgReadyTime")
     
         obligation.setValue(myDatePicker.date, forKey: "idealArrivalTime")
     }
@@ -60,6 +56,8 @@ class CreateObligationViewController: UIViewController {
         } catch {
             print("oopsies didn't work")
         }
+        
+        navigationController?.popViewController(animated: true)
     }
 
     
