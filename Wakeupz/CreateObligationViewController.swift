@@ -36,7 +36,7 @@ class CreateObligationViewController: UIViewController {
         let obligation = NSEntityDescription.insertNewObject(forEntityName: "Obligation", into: self.context)
         
         obligation.setValue(newObligationName.text, forKey: "name")
-        
+    
         obligation.setValue(newAddress.text, forKey: "address")
         
         let stringEstDriveDuration = newEstimatedDriveDuration.text
@@ -61,6 +61,7 @@ class CreateObligationViewController: UIViewController {
             print("oopsies didn't work")
         }
     }
+
     
 
     /*

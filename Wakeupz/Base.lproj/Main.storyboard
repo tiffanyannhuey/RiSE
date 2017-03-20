@@ -61,6 +61,9 @@
                                 <rect key="frame" x="75" y="495" width="134" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Obligation"/>
+                                <connections>
+                                    <action selector="handleAddNewObligation:" destination="tNi-AI-XtD" eventType="touchUpInside" id="AcQ-mo-LfQ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="avg ready duration" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ngv-fH-VqJ">
                                 <rect key="frame" x="124" y="360" width="142" height="30"/>
