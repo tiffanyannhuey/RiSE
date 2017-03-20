@@ -7,19 +7,30 @@
 //
 
 import UIKit
+import CoreData
 
 class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    @IBOutlet weak var earliestWakeupTime: UIDatePicker!
     @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var isOn: UISwitch!
+
     
     var places = ["DBC", "Home", "Work", "Gym", "Church" ]
     var placeSelection = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(backAction))
-        // Do any additional setup if required.
+
+        earliestWakeupTime.backgroundColor = .white
+        
+
     }
     
     func backAction(){
@@ -52,8 +63,36 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         placeSelection = row
     }
     
+
     func Submit(sender: AnyObject) {
         if (placeSelection == 0) {
+        }
+    }
+    
+    func calculateWakeup() {
+        
+        /* algorithm for calculating wake up time. function should return wake up time to
+         to be stored in Core data */
+    }
+    
+    func setAlarmValues() {
+        let alarm = NSEntityDescription.insertNewObject(forEntityName: "Alarm", into: self.context)
+        
+        var updatedWakeupTime = calculateWakeup()
+        alarm.setValue(updatedWakeupTime, forKey: "calculatedWakeup")
+        alarm.setValue(isOn.isOn, forKey: "isOn")
+        alarm.setValue(earliestWakeupTime.date, forKey: "earliestWakeup")
+        
+    }
+    
+    @IBAction func handleAddNewAlarm(sender: UIButton) {
+        setAlarmValues()
+        
+        do {
+            try context.save()
+            print("hello")
+        } catch {
+            print("ooopsies didn't work")
         }
     }
 
