@@ -65,14 +65,13 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     @IBAction func handleAddNewAlarm(sender: UIButton) {
-        
         setAlarmValues()
         
         do {
             try context.save()
             print("hello")
         } catch {
-            print("ooopsides didn't work")
+            print("ooopsies didn't work")
         }
     }
    
