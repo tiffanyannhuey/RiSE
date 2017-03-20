@@ -26,7 +26,7 @@ class IndexTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "indexCell", for: indexPath) as! CustomIndexCell
 
 
-        cell.placeField.text = places[indexPath.row]
+        cell.placeLabel.text = places[indexPath.row]
         cell.timeLabel.text = times[indexPath.row]
         
 

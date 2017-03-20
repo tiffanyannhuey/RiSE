@@ -40,7 +40,7 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         placeSelection = row
     }
     
-    @IBOutlet func Submit(sender: AnyObject) {
+    func Submit(sender: AnyObject) {
         if (placeSelection == 0) {
         }
     }
