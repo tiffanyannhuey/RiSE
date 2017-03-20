@@ -15,8 +15,6 @@ class CustomIndexCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     
     @IBAction func `switch`(_ sender: UISwitch) {
-        
-        
         if (sender.isOn == true ) {
             timeLabel.textColor = UIColor.white
             placeLabel.textColor = UIColor.white

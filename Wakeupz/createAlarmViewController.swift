@@ -50,10 +50,9 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     //Setup for location picker 
-
-//    let attributedString:NSAttributedString?
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        // return places[row]
         let obligation = obligations[row]
         return obligation.name
     }
