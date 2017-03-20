@@ -19,7 +19,7 @@
                         <viewControllerLayoutGuide type="bottom" id="9lT-qq-hGP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4FR-dy-aNR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Create Obligation Page" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DG3-yv-Htd">
@@ -85,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1N-9N-Tm7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4854.375" y="1361.6197183098591"/>
+            <point key="canvasLocation" x="4856" y="1446"/>
         </scene>
         <!--Obligation Table View Controller-->
         <scene sceneID="3SC-LR-fsU">
@@ -173,14 +173,14 @@
             </objects>
             <point key="canvasLocation" x="7342.0289855072469" y="1362.2282608695652"/>
         </scene>
-        <!--Home-->
+        <!--Index Table View Controller-->
         <scene sceneID="oRU-bf-kyO">
             <objects>
                 <tableViewController id="ewn-tY-xHp" customClass="IndexTableViewController" customModule="Wakeupz" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="79" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZDk-FM-Tgy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="indexCell" rowHeight="79" id="uEO-RC-NbV" customClass="CustomIndexCell" customModule="Wakeupz" customModuleProvider="target">
@@ -192,7 +192,8 @@
                                     <subviews>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JrQ-cv-A3A">
                                             <rect key="frame" x="253" y="24" width="69" height="31"/>
-                                            <color key="onTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="onTintColor" red="0.078431372549019607" green="0.37254901960784315" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="switch:" destination="uEO-RC-NbV" eventType="valueChanged" id="mMf-2f-G02"/>
                                             </connections>
@@ -224,9 +225,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.10588235294117647" green="0.082352941176470587" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.078431372549019607" green="0.37254901960784315" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="placeLabel" destination="9v6-NE-2Vf" id="24X-EJ-vQC"/>
                                     <outlet property="timeLabel" destination="4S9-sw-CLP" id="947-Mj-qmq"/>
+                                    <outlet property="toggleAlarm" destination="JrQ-cv-A3A" id="fRv-A0-G4b"/>
                                     <segue destination="Sti-gd-2al" kind="show" id="R4L-sH-Vwi"/>
                                 </connections>
                             </tableViewCell>
@@ -237,7 +240,12 @@
                             <outlet property="delegate" destination="ewn-tY-xHp" id="fWI-m8-rs2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="zOx-z0-bY7">
+                    <navigationItem key="navigationItem" id="zOx-z0-bY7">
+                        <barButtonItem key="leftBarButtonItem" title="obligations test" id="hfs-D7-kLQ">
+                            <connections>
+                                <segue destination="tNi-AI-XtD" kind="show" id="0dK-zQ-kXh"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Yns-Oh-0jH">
                             <connections>
                                 <segue destination="ZCL-rw-BTz" kind="show" identifier="createAlarm" id="4lG-nW-AnX"/>
@@ -432,4 +440,7 @@
             <point key="canvasLocation" x="2626" y="1362"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0dK-zQ-kXh"/>
+    </inferredMetricsTieBreakers>
 </document>

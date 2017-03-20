@@ -29,6 +29,9 @@ class IndexTableViewController: UITableViewController {
         cell.placeLabel.text = places[indexPath.row]
         cell.timeLabel.text = times[indexPath.row]
         
+        cell.toggleAlarm.onTintColor = UIColor(red: (20/255.0), green: (95/255.0), blue: (244/255.0), alpha: 1.0)
+        cell.toggleAlarm.tintColor = UIColor(red: (20/255.0), green: (95/255.0), blue: (244/255.0), alpha: 1.0)
+        
 
         return cell
     }

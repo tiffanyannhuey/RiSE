@@ -13,14 +13,17 @@ class CustomIndexCell: UITableViewCell {
     
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var toggleAlarm: UISwitch!
     
     @IBAction func `switch`(_ sender: UISwitch) {
         if (sender.isOn == true ) {
             timeLabel.textColor = UIColor.white
             placeLabel.textColor = UIColor.white
+
         } else {
             timeLabel.textColor = UIColor.lightGray
             placeLabel.textColor = UIColor.lightGray
+
         }
         
     }
