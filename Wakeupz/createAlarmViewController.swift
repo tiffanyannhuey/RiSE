@@ -10,18 +10,23 @@ import UIKit
 import CoreData
 
 class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet weak var earliestWakeupTime: UIDatePicker!
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var isOn: UISwitch!
+
     
     var places = ["DBC", "Home", "Work", "Gym", "Church" ]
     var placeSelection = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        wakeUpTime.backgroundColor = .white
+        
     }
     
     
@@ -43,6 +48,7 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         placeSelection = row
     }
     
+
     func Submit(sender: AnyObject) {
         if (placeSelection == 0) {
         }
@@ -74,5 +80,6 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
             print("ooopsies didn't work")
         }
     }
+
    
 }
