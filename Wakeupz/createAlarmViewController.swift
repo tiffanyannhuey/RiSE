@@ -29,8 +29,8 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         picker.dataSource = self
         picker.delegate = self
-
-        earliestWakeupTime.backgroundColor = .white
+        
+        earliestWakeupTime.setValue(UIColor.white, forKeyPath: "textColor")
         
     }
     
@@ -49,7 +49,17 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         picker.reloadAllComponents()
     }
     
-    //Setup for location picker 
+//    Setup for location picker 
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        return NSAttributedString(string: obligations[row].name!, attributes: [NSForegroundColorAttributeName:UIColor.white])
+    }
+    
+//    func datePicker(_ datePicker: UIDatePicker, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+//        return NSAttributedString(string: , attributes: [NSForegroundColorAttributeName:UIColor.white])
+//    }
+    
+
+    
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         // return places[row]
