@@ -20,8 +20,6 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
 
     var obligations: [Obligation] = []
     
-    // var places = ["DBC", "Home", "Work", "Gym", "Church" ]
-    // var placeSelection = 0
     var obligationSelection = 0
     
     override func viewDidLoad() {
@@ -62,13 +60,11 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        // return places[row]
         let obligation = obligations[row]
         return obligation.name
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        //return places.count
         return obligations.count
     }
     
@@ -77,13 +73,12 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // placeSelection = row
         obligationSelection = row
     }
     
     func calculateWakeup() {
         
-        /* algorithm for calculating wake up time. function should return wake up time to
+        /* algorithm for calculating wakeup time. function should return wake up time to
          to be stored in Core data */
     }
     
