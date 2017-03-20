@@ -46,7 +46,7 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     override func viewWillAppear(_ animated: Bool) {
         getData()
-        // picker.reloadData()
+        picker.reloadAllComponents()
     }
     
     //Setup for location picker 
