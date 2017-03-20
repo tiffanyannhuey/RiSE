@@ -63,7 +63,7 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     func setAlarmValues() {
         let alarm = NSEntityDescription.insertNewObject(forEntityName: "Alarm", into: self.context)
         
-        var updatedWakeupTime = calculateWakeup()
+        let updatedWakeupTime = calculateWakeup()
         alarm.setValue(updatedWakeupTime, forKey: "calculatedWakeup")
         alarm.setValue(isOn.isOn, forKey: "isOn")
         alarm.setValue(earliestWakeupTime.date, forKey: "earliestWakeup")
