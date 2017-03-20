@@ -4,6 +4,7 @@
         <attribute name="calculatedWakeup" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="earliestWakeup" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="isOn" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="obligation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Obligation" inverseName="alarm" inverseEntity="Obligation" syncable="YES"/>
     </entity>
     <entity name="Obligation" representedClassName="Obligation" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
@@ -11,9 +12,10 @@
         <attribute name="estimatedDrivingDuration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="idealArrivalTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="alarm" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Alarm" inverseName="obligation" inverseEntity="Alarm" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Alarm" positionX="-36" positionY="9" width="128" height="90"/>
-        <element name="Obligation" positionX="0" positionY="45" width="128" height="120"/>
+        <element name="Alarm" positionX="-36" positionY="9" width="128" height="105"/>
+        <element name="Obligation" positionX="0" positionY="45" width="128" height="135"/>
     </elements>
 </model>
