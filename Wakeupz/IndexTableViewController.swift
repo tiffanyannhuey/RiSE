@@ -15,7 +15,9 @@ class IndexTableViewController: UITableViewController {
     var places = ["DBC", "Home", "Work", "Gym", "Church" ]
     var times = ["6:45", "8:15", "10:00", "7:23", "12:30"]
 
-
+    
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
    
         return places.count 
