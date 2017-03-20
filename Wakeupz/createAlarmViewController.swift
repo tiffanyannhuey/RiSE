@@ -25,7 +25,7 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // earliestWakeupTime.backgroundColor = .white
+        earliestWakeupTime.backgroundColor = .white
         
     }
     
@@ -48,12 +48,6 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         placeSelection = row
     }
     
-
-    func Submit(sender: AnyObject) {
-        if (placeSelection == 0) {
-        }
-    }
-    
     func calculateWakeup() {
         
         /* algorithm for calculating wake up time. function should return wake up time to
@@ -65,7 +59,7 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         let updatedWakeupTime = calculateWakeup()
         alarm.setValue(updatedWakeupTime, forKey: "calculatedWakeup")
-        alarm.setValue(isOn.isOn, forKey: "isOn")
+        alarm.setValue("false", forKey: "isOn")
         alarm.setValue(earliestWakeupTime.date, forKey: "earliestWakeup")
         
     }

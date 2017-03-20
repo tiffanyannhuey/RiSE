@@ -62,9 +62,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Obligation"/>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="avg ready duration" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ngv-fH-VqJ">
+                                <rect key="frame" x="124" y="360" width="142" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.10588235294117647" green="0.082352941176470587" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="avgReadyDuration" destination="ngv-fH-VqJ" id="dWq-oz-EXT"/>
+                        <outlet property="myDatePicker" destination="MTI-Fc-NBt" id="T8r-Pq-WAP"/>
+                        <outlet property="newAddress" destination="Ijb-jg-TN4" id="0KB-Ii-Qlh"/>
+                        <outlet property="newEstimatedDriveDuration" destination="ngv-fH-VqJ" id="3eg-ii-blJ"/>
+                        <outlet property="newObligationName" destination="hXV-Ad-tgx" id="CX9-Jd-O8Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1N-9N-Tm7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -388,8 +402,8 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="900"/>
                     <connections>
+                        <outlet property="earliestWakeupTime" destination="uRi-Ha-vVa" id="4SY-3q-Ys2"/>
                         <outlet property="picker" destination="6ce-CP-Mc0" id="CwW-88-7Ag"/>
-                        <outlet property="wakeUpTime" destination="uRi-Ha-vVa" id="sGC-ZH-kqz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4g-JJ-YwT" userLabel="First Responder" sceneMemberID="firstResponder"/>

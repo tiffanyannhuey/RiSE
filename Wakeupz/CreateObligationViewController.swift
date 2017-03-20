@@ -13,11 +13,13 @@ class CreateObligationViewController: UIViewController {
     
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    
     @IBOutlet weak var newObligationName: UITextField!
     @IBOutlet weak var myDatePicker: UIDatePicker!
     @IBOutlet weak var newAddress: UITextField!
     @IBOutlet weak var newEstimatedDriveDuration: UITextField!
-    // avg reaady duration
+    @IBOutlet weak var avgReadyDuration: UITextField!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +32,7 @@ class CreateObligationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func setObligationValues() {
+   func setObligationValues() {
         let obligation = NSEntityDescription.insertNewObject(forEntityName: "Obligation", into: self.context)
         
         obligation.setValue(newObligationName.text, forKey: "name")
@@ -40,11 +42,16 @@ class CreateObligationViewController: UIViewController {
         let stringEstDriveDuration = newEstimatedDriveDuration.text
         let intEstDriveDuration = Int(stringEstDriveDuration!)
         obligation.setValue(intEstDriveDuration, forKey: "estimatedDrivingDuration")
-        
+    
+        let stringAvgReadyTime = avgReadyDuration.text
+        let intAvgReadyTime = Int(stringAvgReadyTime!)
+        obligation.setValue(intAvgReadyTime, forKey: "avgReadyTime")
+    
         obligation.setValue(myDatePicker.date, forKey: "idealArrivalTime")
     }
     
     @IBAction func handleAddNewObligation(_ sender: UIButton) {
+        
         setObligationValues()
         
         do {
