@@ -25,7 +25,7 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        wakeUpTime.backgroundColor = .white
+        earliestWakeupTime.backgroundColor = .white
         
     }
     
