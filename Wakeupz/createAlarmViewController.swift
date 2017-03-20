@@ -25,14 +25,29 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        wakeUpTime.backgroundColor = .white
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(backAction))
+
+        earliestWakeupTime.backgroundColor = .white
+        
+
     }
     
+    func backAction(){
+        //print("Back Button Clicked")
+        dismiss(animated: true, completion: nil)
+    }
     
     //Setup for location picker 
+
+//    let attributedString:NSAttributedString?
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+//            let attributedString = NSAttributedString(string: "\(places[row])", attributes: [NSForegroundColorAttributeName : UIColor.white])
+//            return attributedString
+//        }
+//        return attributedString
         return places[row]
     }
     
