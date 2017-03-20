@@ -12,7 +12,7 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
 
     @IBOutlet weak var wakeUpTime: UIDatePicker!
     @IBOutlet weak var picker: UIPickerView!
-    @IBOutlet weak var getReadyTime: UIDatePicker!
+
     
     var places = ["DBC", "Home", "Work", "Gym", "Church" ]
     var placeSelection = 0
@@ -20,7 +20,6 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
         wakeUpTime.backgroundColor = .white
-        getReadyTime.backgroundColor = .white
         
         
         // Do any additional setup after loading the view.
