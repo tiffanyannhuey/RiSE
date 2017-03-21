@@ -13,19 +13,21 @@ class CreateObligationViewController: UIViewController {
     
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    
     @IBOutlet weak var newObligationName: UITextField!
-    @IBOutlet weak var myDatePicker: UIDatePicker!
     @IBOutlet weak var newAddress: UITextField!
-    @IBOutlet weak var newEstimatedDriveDuration: UITextField!
-    @IBOutlet weak var avgReadyDuration: UITextField!
-
+    @IBOutlet weak var newDatePicker: UIDatePicker!
+    @IBOutlet weak var avgReadyDuration: UIDatePicker!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        newDatePicker.setValue(UIColor.white, forKeyPath: "textColor")
+        avgReadyDuration.setValue(UIColor.white, forKeyPath: "textColor")
     }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -36,18 +38,9 @@ class CreateObligationViewController: UIViewController {
         let obligation = NSEntityDescription.insertNewObject(forEntityName: "Obligation", into: self.context)
         
         obligation.setValue(newObligationName.text, forKey: "name")
-    
         obligation.setValue(newAddress.text, forKey: "address")
-        
-        let stringEstDriveDuration = newEstimatedDriveDuration.text
-        let intEstDriveDuration = Int(stringEstDriveDuration!)
-        obligation.setValue(intEstDriveDuration, forKey: "estimatedDrivingDuration")
-    
-        let stringAvgReadyTime = avgReadyDuration.text
-        let intAvgReadyTime = Int(stringAvgReadyTime!)
-        obligation.setValue(intAvgReadyTime, forKey: "avgReadyTime")
-    
-        obligation.setValue(myDatePicker.date, forKey: "idealArrivalTime")
+        obligation.setValue(avgReadyDuration.countDownDuration, forKey: "avgReadyTime")
+        obligation.setValue(newDatePicker.date, forKey: "idealArrivalTime")
     }
     
     @IBAction func handleAddNewObligation(_ sender: UIButton) {
@@ -60,6 +53,8 @@ class CreateObligationViewController: UIViewController {
         } catch {
             print("oopsies didn't work")
         }
+        
+        navigationController?.popViewController(animated: true)
     }
 
     

@@ -32,6 +32,15 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         earliestWakeupTime.setValue(UIColor.white, forKeyPath: "textColor")
         
+        // Do any additional setup if required.
+    
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(backAction))
+        
+    }
+    
+    func backAction(){
+        //print("Back Button Clicked")
+        dismiss(animated: true, completion: nil)
     }
     
     func getData() {
