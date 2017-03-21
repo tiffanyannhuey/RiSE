@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F78DE601E81B3F500AF9BE0 /* HapticTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78DE5F1E81B3F500AF9BE0 /* HapticTestController.swift */; };
 		0F78DE621E81B68D00AF9BE0 /* StandardAlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78DE611E81B68D00AF9BE0 /* StandardAlarmController.swift */; };
+		0F78DE641E81DC2900AF9BE0 /* SelectTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78DE631E81DC2900AF9BE0 /* SelectTypeController.swift */; };
 		0FC6463A1E7EFCC500FB2F05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC646391E7EFCC500FB2F05 /* LaunchScreen.storyboard */; };
 		54B3513F1E7DFA83009C366A /* IndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3513E1E7DFA83009C366A /* IndexTableViewController.swift */; };
 		54B351431E7DFD61009C366A /* CustomIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B351421E7DFD61009C366A /* CustomIndexCell.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		0F78DE5F1E81B3F500AF9BE0 /* HapticTestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticTestController.swift; sourceTree = "<group>"; };
 		0F78DE611E81B68D00AF9BE0 /* StandardAlarmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardAlarmController.swift; sourceTree = "<group>"; };
+		0F78DE631E81DC2900AF9BE0 /* SelectTypeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTypeController.swift; sourceTree = "<group>"; };
 		0FC646391E7EFCC500FB2F05 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54B3513E1E7DFA83009C366A /* IndexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTableViewController.swift; sourceTree = "<group>"; };
 		54B351421E7DFD61009C366A /* CustomIndexCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomIndexCell.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				54B351481E7E1F6E009C366A /* ObligationTableViewController.swift */,
 				54B3514C1E7E2432009C366A /* CustomRouteCell.swift */,
 				54B351501E7F082A009C366A /* createAlarmViewController.swift */,
+				0F78DE631E81DC2900AF9BE0 /* SelectTypeController.swift */,
 				54B351521E7F180C009C366A /* editObligationViewController.swift */,
 				B25549E21E7F1D3C00265A2C /* CreateObligationViewController.swift */,
 			);
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B25549E31E7F1D3C00265A2C /* CreateObligationViewController.swift in Sources */,
+				0F78DE641E81DC2900AF9BE0 /* SelectTypeController.swift in Sources */,
 				54B3513F1E7DFA83009C366A /* IndexTableViewController.swift in Sources */,
 				0F78DE601E81B3F500AF9BE0 /* HapticTestController.swift in Sources */,
 				54B351431E7DFD61009C366A /* CustomIndexCell.swift in Sources */,

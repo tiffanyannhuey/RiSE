@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="2046" y="534"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Select Type Controller-->
         <scene sceneID="vYj-kM-tBH">
             <objects>
-                <tableViewController id="meA-B1-uhf" sceneMemberID="viewController">
+                <tableViewController id="meA-B1-uhf" customClass="SelectTypeController" customModule="Wakeupz" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="2" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="TqS-CG-oF4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,7 +267,7 @@
                                                 <rect key="frame" x="8" y="437" width="298" height="30"/>
                                                 <color key="backgroundColor" red="0.28627450980392155" green="0.22352941176470589" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
-                                                <state key="normal" title="Click to create a new location">
+                                                <state key="normal" title="Create new destination">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -519,6 +519,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6Ro-Dv-6Sk"/>
+        <segue reference="lg2-1p-yYI"/>
     </inferredMetricsTieBreakers>
 </document>
