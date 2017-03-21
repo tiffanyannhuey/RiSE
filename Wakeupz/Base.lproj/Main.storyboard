@@ -74,11 +74,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="zOx-z0-bY7">
-                        <barButtonItem key="leftBarButtonItem" title="haptic test" id="QYs-cr-usx">
-                            <connections>
-                                <segue destination="KFm-qk-d8u" kind="show" id="NTu-gH-vwf"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="haptic test" id="QYs-cr-usx"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Yns-Oh-0jH">
                             <connections>
                                 <segue destination="meA-B1-uhf" kind="show" id="T5M-cK-PUC"/>
@@ -90,24 +86,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="soH-pr-thK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3010" y="534"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="yaw-pY-2Mu">
-            <objects>
-                <viewController id="KFm-qk-d8u" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2cV-I4-ERr"/>
-                        <viewControllerLayoutGuide type="bottom" id="Qyv-PL-Hxo"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UdX-xh-ZMK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wyn-Dl-iwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4041" y="-236"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WJw-76-utQ">
@@ -293,6 +271,9 @@
                                                 <state key="normal" title="Submit">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="handleAddNewAlarm:" destination="AJs-Eu-n28" eventType="touchUpInside" id="5cG-Jx-EVz"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your destination: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCR-As-rhE">
                                                 <rect key="frame" x="49.666666666666671" y="170" width="221.33333333333331" height="27"/>
@@ -361,6 +342,7 @@
                     <size key="freeformSize" width="320" height="900"/>
                     <connections>
                         <outlet property="earliestWakeupTime" destination="uRi-Ha-vVa" id="4SY-3q-Ys2"/>
+                        <outlet property="handleAddNewAlarm" destination="QzO-CE-xHA" id="oYZ-7h-oMx"/>
                         <outlet property="picker" destination="6ce-CP-Mc0" id="CwW-88-7Ag"/>
                     </connections>
                 </viewController>
