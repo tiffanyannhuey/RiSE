@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F78DE601E81B3F500AF9BE0 /* HapticTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78DE5F1E81B3F500AF9BE0 /* HapticTestController.swift */; };
+		0F78DE621E81B68D00AF9BE0 /* StandardAlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78DE611E81B68D00AF9BE0 /* StandardAlarmController.swift */; };
 		0FC6463A1E7EFCC500FB2F05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC646391E7EFCC500FB2F05 /* LaunchScreen.storyboard */; };
 		54B3513F1E7DFA83009C366A /* IndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3513E1E7DFA83009C366A /* IndexTableViewController.swift */; };
 		54B351431E7DFD61009C366A /* CustomIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B351421E7DFD61009C366A /* CustomIndexCell.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F78DE5F1E81B3F500AF9BE0 /* HapticTestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticTestController.swift; sourceTree = "<group>"; };
+		0F78DE611E81B68D00AF9BE0 /* StandardAlarmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardAlarmController.swift; sourceTree = "<group>"; };
 		0FC646391E7EFCC500FB2F05 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54B3513E1E7DFA83009C366A /* IndexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTableViewController.swift; sourceTree = "<group>"; };
 		54B351421E7DFD61009C366A /* CustomIndexCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomIndexCell.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 				E916043A1E7CA66F00EC7002 /* AppDelegate.swift */,
 				0FC646391E7EFCC500FB2F05 /* LaunchScreen.storyboard */,
 				E916043E1E7CA66F00EC7002 /* Main.storyboard */,
+				0F78DE611E81B68D00AF9BE0 /* StandardAlarmController.swift */,
+				0F78DE5F1E81B3F500AF9BE0 /* HapticTestController.swift */,
 				E91604441E7CA66F00EC7002 /* Assets.xcassets */,
 				E91604491E7CA66F00EC7002 /* Info.plist */,
 				E91604411E7CA66F00EC7002 /* Wakeupz.xcdatamodeld */,
@@ -163,6 +169,7 @@
 			files = (
 				B25549E31E7F1D3C00265A2C /* CreateObligationViewController.swift in Sources */,
 				54B3513F1E7DFA83009C366A /* IndexTableViewController.swift in Sources */,
+				0F78DE601E81B3F500AF9BE0 /* HapticTestController.swift in Sources */,
 				54B351431E7DFD61009C366A /* CustomIndexCell.swift in Sources */,
 				54B351511E7F082A009C366A /* createAlarmViewController.swift in Sources */,
 				E91604431E7CA66F00EC7002 /* Wakeupz.xcdatamodeld in Sources */,
@@ -170,6 +177,7 @@
 				54B351531E7F180C009C366A /* editObligationViewController.swift in Sources */,
 				54B3514D1E7E2432009C366A /* CustomRouteCell.swift in Sources */,
 				E916043B1E7CA66F00EC7002 /* AppDelegate.swift in Sources */,
+				0F78DE621E81B68D00AF9BE0 /* StandardAlarmController.swift in Sources */,
 				54B351491E7E1F6E009C366A /* ObligationTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

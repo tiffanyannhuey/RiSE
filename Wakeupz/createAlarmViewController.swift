@@ -34,14 +34,17 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         // Do any additional setup if required.
     
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(backAction))
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(backAction))
         
     }
     
-    func backAction(){
-        //print("Back Button Clicked")
-        dismiss(animated: true, completion: nil)
-    }
+//    func backAction(){
+//        //print("Back Button Clicked")
+//        dismiss(animated: true, completion: nil)
+//    }
+//    
+    
+    
     
     func getData() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
