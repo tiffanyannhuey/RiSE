@@ -1,38 +1,48 @@
-//
-//  IndexTableViewController.swift
-//  Wakeupz
-//
-//  Created by Tiffany Huey on 3/18/17.
-//  Copyright © 2017 F4. All rights reserved.
-//
-
 import UIKit
-
 
 
 class IndexTableViewController: UITableViewController {
     
-    var places = ["DBC", "Home", "Work", "Gym", "Church" ]
-    var times = ["6:45", "8:15", "10:00", "7:23", "12:30"]
-
+    var alarms: [Alarm] = []
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getData()
+        self.tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         self.showAlert()
     }
     
+    func getData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        do {
+            alarms = try context.fetch(Alarm.fetchRequest())
+            print("That is sooo fetch")
+        } catch {
+            print("Fetching failed")
+        }
+    }
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
    
-        return places.count 
+        return alarms.count
     }
 
  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "indexCell", for: indexPath) as! CustomIndexCell
-
-
-        cell.placeLabel.text = places[indexPath.row]
-        cell.timeLabel.text = times[indexPath.row]
         
+        cell.placeLabel.text = alarms[indexPath.row].obligation?.name
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm a"
+        let earliestWakeupString = dateFormatter.string(for: alarms[indexPath.row].earliestWakeup)
+        
+
         cell.toggleAlarm.onTintColor = UIColor(red: (20/255.0), green: (95/255.0), blue: (244/255.0), alpha: 1.0)
         cell.toggleAlarm.tintColor = UIColor(red: (20/255.0), green: (95/255.0), blue: (244/255.0), alpha: 1.0)
         
@@ -42,7 +52,7 @@ class IndexTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.places.remove(at: indexPath.row)
+            self.alarms.remove(at: indexPath.row)
             self.tableView.reloadData()
         }
     }

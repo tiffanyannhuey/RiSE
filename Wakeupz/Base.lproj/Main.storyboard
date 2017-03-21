@@ -74,6 +74,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="zOx-z0-bY7">
+                        <barButtonItem key="leftBarButtonItem" title="haptic test" id="QYs-cr-usx">
+                            <connections>
+                                <segue destination="KFm-qk-d8u" kind="show" id="NTu-gH-vwf"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Yns-Oh-0jH">
                             <connections>
                                 <segue destination="meA-B1-uhf" kind="show" id="T5M-cK-PUC"/>
@@ -102,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wyn-Dl-iwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2045" y="-238"/>
+            <point key="canvasLocation" x="4041" y="-236"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WJw-76-utQ">

@@ -1,11 +1,3 @@
-//
-//  createAlarmViewController.swift
-//  Wakeupz
-//
-//  Created by Tiffany Huey on 3/19/17.
-//  Copyright © 2017 F4. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
@@ -19,9 +11,6 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var isOn: UISwitch!
 
     var obligations: [Obligation] = []
-    
-    // var places = ["DBC", "Home", "Work", "Gym", "Church" ]
-    // var placeSelection = 0
     var obligationSelection = 0
     
     override func viewDidLoad() {
@@ -32,18 +21,7 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         earliestWakeupTime.setValue(UIColor.white, forKeyPath: "textColor")
         self.showAlert()
-        
-        // Do any additional setup if required.
-    
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(backAction))
-        
     }
-    
-//    func backAction(){
-//        //print("Back Button Clicked")
-//        dismiss(animated: true, completion: nil)
-//    }
-//    
     
     
     
@@ -66,22 +44,14 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         return NSAttributedString(string: obligations[row].name!, attributes: [NSForegroundColorAttributeName:UIColor.white])
     }
-    
-//    func datePicker(_ datePicker: UIDatePicker, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-//        return NSAttributedString(string: , attributes: [NSForegroundColorAttributeName:UIColor.white])
-//    }
-    
 
     
-    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        // return places[row]
         let obligation = obligations[row]
         return obligation.name
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        //return places.count
         return obligations.count
     }
     
@@ -90,7 +60,6 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // placeSelection = row
         obligationSelection = row
     }
     
@@ -103,10 +72,13 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     func setAlarmValues() {
         let alarm = NSEntityDescription.insertNewObject(forEntityName: "Alarm", into: self.context)
         
-        let updatedWakeupTime = calculateWakeup()
-        alarm.setValue(updatedWakeupTime, forKey: "calculatedWakeup")
-        alarm.setValue("false", forKey: "isOn")
+//        let updatedWakeupTime = calculateWakeup()
+//        alarm.setValue(updatedWakeupTime, forKey: "calculatedWakeup")
+//        alarm.setValue("false", forKey: "isOn")
         alarm.setValue(earliestWakeupTime.date, forKey: "earliestWakeup")
+        
+        let obligationSelected = obligations[obligationSelection]
+        alarm.setValue(obligationSelected, forKey: "obligation")
         
     }
     
