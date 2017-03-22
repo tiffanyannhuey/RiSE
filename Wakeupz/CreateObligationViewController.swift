@@ -27,6 +27,25 @@ class CreateObligationViewController: UIViewController {
         avgReadyDuration.setValue(UIColor.white, forKeyPath: "textColor")
     }
     
+    func validateName() -> Bool {
+        if newObligationName.text == "" {
+            // pop up here
+            print("new obligation name fail")
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    func validateAddress() -> Bool {
+        if newAddress.text == "" {
+            // pop up here
+            print("new obligation address fail")
+            return false
+        } else {
+            return true
+        }
+    }
 
 
     override func didReceiveMemoryWarning() {
@@ -34,39 +53,32 @@ class CreateObligationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-   func setObligationValues() {
+    func setObligationValues() -> Bool {
         let obligation = NSEntityDescription.insertNewObject(forEntityName: "Obligation", into: self.context)
         
-        obligation.setValue(newObligationName.text, forKey: "name")
-        obligation.setValue(newAddress.text, forKey: "address")
-        obligation.setValue(avgReadyDuration.countDownDuration, forKey: "avgReadyTime")
-        obligation.setValue(newDatePicker.date, forKey: "idealArrivalTime")
+        if validateName() && validateAddress() {
+            obligation.setValue(newObligationName.text, forKey: "name")
+            obligation.setValue(newAddress.text, forKey: "address")
+            // set estimatedDrivingDuration value here
+            obligation.setValue(avgReadyDuration.countDownDuration, forKey: "avgReadyTime")
+            obligation.setValue(newDatePicker.date, forKey: "idealArrivalTime")
+            obligation.setValue(Date(), forKey: "createdAt")
+            return true
+        } else {
+            return false
+        }
     }
     
     @IBAction func handleAddNewObligation(_ sender: UIButton) {
         
-        setObligationValues()
-        
-        do {
-            try context.save()
-            print("hello")
-        } catch {
-            print("oopsies didn't work")
+        if setObligationValues() {
+            do {
+                try context.save()
+                print("obligation saved!")
+            } catch {
+                print("oopsies didn't save")
+            }
+            navigationController?.popViewController(animated: true)
         }
-        
-        navigationController?.popViewController(animated: true)
     }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -29,6 +29,7 @@
 		0F78DE5F1E81B3F500AF9BE0 /* HapticTestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticTestController.swift; sourceTree = "<group>"; };
 		0F78DE611E81B68D00AF9BE0 /* StandardAlarmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardAlarmController.swift; sourceTree = "<group>"; };
 		0F78DE631E81DC2900AF9BE0 /* SelectTypeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTypeController.swift; sourceTree = "<group>"; };
+		0F9E1EA21E824ABD00CF6E7D /* CANDY.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = CANDY.TTF; path = ../../../../../../Desktop/CANDY.TTF; sourceTree = "<group>"; };
 		0FC646391E7EFCC500FB2F05 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54B3513E1E7DFA83009C366A /* IndexTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTableViewController.swift; sourceTree = "<group>"; };
 		54B351421E7DFD61009C366A /* CustomIndexCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomIndexCell.swift; sourceTree = "<group>"; };
@@ -57,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F9E1EA11E824A8200CF6E7D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0F9E1EA21E824ABD00CF6E7D /* CANDY.TTF */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		E916042E1E7CA66F00EC7002 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				E916043A1E7CA66F00EC7002 /* AppDelegate.swift */,
+				0F9E1EA11E824A8200CF6E7D /* Fonts */,
 				0FC646391E7EFCC500FB2F05 /* LaunchScreen.storyboard */,
 				E916043E1E7CA66F00EC7002 /* Main.storyboard */,
 				0F78DE611E81B68D00AF9BE0 /* StandardAlarmController.swift */,

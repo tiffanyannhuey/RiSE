@@ -24,17 +24,32 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     func getData() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let obligationFetch: NSFetchRequest<Obligation> = Obligation.fetchRequest()
+        let obligationSort = NSSortDescriptor(key: "createdAt", ascending: false)
+        obligationFetch.sortDescriptors = [obligationSort]
         
         do {
-            obligations = try context.fetch(Obligation.fetchRequest())
+            obligations = try context.fetch(obligationFetch)
         } catch {
             print("Fetching failed")
         }
     }
     
+    func removeNilValues(arrayOf: inout [Obligation]) -> [Obligation] {
+        for element in arrayOf {
+            if element.name == nil {
+                var index = arrayOf.index(of: element)
+                arrayOf.remove(at: index!)
+            }
+        }
+        return arrayOf
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         getData()
+        obligations = removeNilValues(arrayOf: &obligations)
         picker.reloadAllComponents()
     }
     
@@ -70,14 +85,15 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     func setAlarmValues() {
         let alarm = NSEntityDescription.insertNewObject(forEntityName: "Alarm", into: self.context)
         
-//        let updatedWakeupTime = calculateWakeup()
-//        alarm.setValue(updatedWakeupTime, forKey: "calculatedWakeup")
-//        alarm.setValue("false", forKey: "isOn")
+        // let updatedWakeupTime = calculateWakeup()
+        // remember to remove Date() from below
+        alarm.setValue(Date(), forKey: "calculatedWakeup")
         alarm.setValue(earliestWakeupTime.date, forKey: "earliestWakeup")
+        alarm.setValue(true, forKey: "isSmart")
         
         let obligationSelected = obligations[obligationSelection]
         alarm.setValue(obligationSelected, forKey: "obligation")
-        
+        alarm.setValue(Date(), forKey: "createdAt")
     }
     
     
@@ -86,9 +102,7 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         do {
             try context.save()
-            print("hello")
         } catch {
-            print("ooopsies didn't work")
         }
     }
     
@@ -102,4 +116,8 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         present(alertController, animated: true, completion: nil)
     }
    
+//    @IBAction func scrollDown(_ sender: UIButton) {
+//        self.view.bounds.setContentOffset(CGPoint(x: 100, y: 200), animated: true)
+//
+//    }
 }

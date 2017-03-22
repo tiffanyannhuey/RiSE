@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1212" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15F34" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Alarm" representedClassName="Alarm" syncable="YES" codeGenerationType="class">
         <attribute name="calculatedWakeup" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="earliestWakeup" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="isOn" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="obligation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Obligation" inverseName="alarm" inverseEntity="Obligation" syncable="YES"/>
+        <attribute name="isOn" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isSmart" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="regularWakeup" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="obligation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Obligation" inverseName="smartAlarm" inverseEntity="Obligation" syncable="YES"/>
     </entity>
     <entity name="Obligation" representedClassName="Obligation" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="avgReadyTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="estimatedDrivingDuration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="idealArrivalTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="alarm" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Alarm" inverseName="obligation" inverseEntity="Alarm" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" maxValueString="12" syncable="YES"/>
+        <relationship name="smartAlarm" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Alarm" inverseName="obligation" inverseEntity="Alarm" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Alarm" positionX="-36" positionY="9" width="128" height="105"/>
-        <element name="Obligation" positionX="0" positionY="45" width="128" height="135"/>
+        <element name="Alarm" positionX="-36" positionY="9" width="128" height="150"/>
+        <element name="Obligation" positionX="0" positionY="45" width="128" height="150"/>
     </elements>
 </model>

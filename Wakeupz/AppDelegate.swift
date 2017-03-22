@@ -23,13 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // create blur effect
 //        navigationBarAppearace.isTranslucent = false
-                
-        
+
         // nav bar background color
         navigationBarAppearace.barTintColor = UIColor(red: (51/255.0), green: (51/255.0), blue: (61/255.0), alpha: 1.0)
         
         // change navigation item title color
-        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor(red: (12/255.0), green: (97/255.0), blue: (254/255.0), alpha: 1.0)
+]
         
         return true
     }
