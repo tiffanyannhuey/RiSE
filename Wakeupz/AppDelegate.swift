@@ -21,8 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let navigationBarAppearace = UINavigationBar.appearance()
         
-        // nav bar item text color
-        navigationBarAppearace.tintColor = UIColor.white
+        // create blur effect
+//        navigationBarAppearace.isTranslucent = false
+                
         
         // nav bar background color
         navigationBarAppearace.barTintColor = UIColor(red: (51/255.0), green: (51/255.0), blue: (61/255.0), alpha: 1.0)

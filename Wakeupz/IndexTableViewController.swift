@@ -5,10 +5,11 @@ class IndexTableViewController: UITableViewController {
     
     var alarms: [Alarm] = []
     
-    
     override func viewWillAppear(_ animated: Bool) {
         getData()
         self.tableView.reloadData()
+        let navBar = view as? UINavigationBar
+        navBar?.tintColor = UIColor.darkGray
     }
     
     override func viewDidLoad() {
@@ -59,14 +60,34 @@ class IndexTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func whiten() {
+        print("You're inside the whiten function")
+        print("It located the nav bar")
+        let navBar = view as? UINavigationBar
+        navBar?.tintColor = UIColor.red 
+        print("It worked")
+    }
+    
     @IBAction func showAlert() {
-        let alertController = UIAlertController(title: "Hello!", message: "Click the '+' button on the top-right corner to get started.", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Hi there!", message: "After, tapping the 'OK' button below, tap the '+' button on the top-right corner to get started.", preferredStyle: .actionSheet)
         
-        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: {action in self.whiten()
+        })
+        
+//        func myHandler(alert: UIAlertAction){
+//            print("You tapped: \(alert.title)")
+//        }
+        
+//        let callFunction = UIAlertAction(title: "Call Function", style: UIAlertActionStyle.default, handler: myHandler)
+        
+        
         alertController.addAction(defaultAction)
+//        alertController.addAction(turnWhite)
+//        alertController.addAction(callFunction)
         
         present(alertController, animated: true, completion: nil)
+        
     }
 
-
+    
 }

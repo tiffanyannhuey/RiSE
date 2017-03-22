@@ -17,7 +17,7 @@ class SelectTypeController: UITableViewController {
     }
     
     @IBAction func showAlert() {
-        let alertController = UIAlertController(title: "You made it!", message: "Tap 'New Smart Alarm' if you need to wake up for an event. Otherwise, tap 'New Standard Alarm'", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "You made it!", message: "Tap 'New Smart Alarm' if you're waking up for an event, or any activity that requires travel. Otherwise, tap 'New Standard Alarm'", preferredStyle: .actionSheet)
         
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(defaultAction)
