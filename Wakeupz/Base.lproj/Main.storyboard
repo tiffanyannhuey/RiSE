@@ -272,7 +272,8 @@
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="handleAddNewAlarm:" destination="AJs-Eu-n28" eventType="touchUpInside" id="5cG-Jx-EVz"/>
+                                                    <action selector="handleAddNewAlarm:" destination="AJs-Eu-n28" eventType="touchUpInside" id="wLO-Dz-8ET"/>
+                                                    <segue destination="ewn-tY-xHp" kind="show" id="7Ck-Z5-mKE"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your destination: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCR-As-rhE">
@@ -342,7 +343,6 @@
                     <size key="freeformSize" width="320" height="900"/>
                     <connections>
                         <outlet property="earliestWakeupTime" destination="uRi-Ha-vVa" id="4SY-3q-Ys2"/>
-                        <outlet property="handleAddNewAlarm" destination="QzO-CE-xHA" id="oYZ-7h-oMx"/>
                         <outlet property="picker" destination="6ce-CP-Mc0" id="CwW-88-7Ag"/>
                     </connections>
                 </viewController>
@@ -506,6 +506,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="7Ck-Z5-mKE"/>
         <segue reference="lg2-1p-yYI"/>
     </inferredMetricsTieBreakers>
 </document>

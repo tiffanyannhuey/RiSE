@@ -42,6 +42,8 @@ class IndexTableViewController: UITableViewController {
         dateFormatter.dateFormat = "hh:mm a"
         let earliestWakeupString = dateFormatter.string(for: alarms[indexPath.row].earliestWakeup)
         
+        cell.timeLabel.text = earliestWakeupString
+        
 
         cell.toggleAlarm.onTintColor = UIColor(red: (20/255.0), green: (95/255.0), blue: (244/255.0), alpha: 1.0)
         cell.toggleAlarm.tintColor = UIColor(red: (20/255.0), green: (95/255.0), blue: (244/255.0), alpha: 1.0)
@@ -58,7 +60,7 @@ class IndexTableViewController: UITableViewController {
     }
     
     @IBAction func showAlert() {
-        let alertController = UIAlertController(title: "Hello!", message: "Click the '+' button on the top-right corner to get started.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Hello!", message: "Click the '+' button on the top-right corner to get started.", preferredStyle: .actionSheet)
         
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(defaultAction)

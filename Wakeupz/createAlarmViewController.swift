@@ -81,7 +81,7 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     
-    @IBAction func handleAddNewAlarm(_ sender: Any) {
+    @IBAction func handleAddNewAlarm(_ sender: UIButton) {
         setAlarmValues()
         
         do {
@@ -94,7 +94,7 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
 
     @IBAction func showAlert() {
-        let alertController = UIAlertController(title: "Where you goin'?", message: "Where is your event located? If you don't see your destination, add one by tapping 'create new destination'.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Where you goin'?", message: "Where is your event located? If you don't see your destination, add one by tapping 'create new destination'.", preferredStyle: .actionSheet)
         
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(defaultAction)
