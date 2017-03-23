@@ -29,7 +29,6 @@ class CreateObligationViewController: UIViewController {
     
     func validateName() -> Bool {
         if newObligationName.text == "" {
-            // pop up here
             print("new obligation name fail")
             return false
         } else {
@@ -65,12 +64,13 @@ class CreateObligationViewController: UIViewController {
             obligation.setValue(Date(), forKey: "createdAt")
             return true
         } else {
+            self.showAlert()
             return false
         }
     }
     
+    
     @IBAction func handleAddNewObligation(_ sender: UIButton) {
-        
         if setObligationValues() {
             do {
                 try context.save()
@@ -79,6 +79,48 @@ class CreateObligationViewController: UIViewController {
                 print("oopsies didn't save")
             }
             navigationController?.popViewController(animated: true)
+//            createAlarmViewController.scrollDown()
+        } else {
+            print("???")
         }
     }
+    
+    @IBAction func showAlert() {
+        let alertController = UIAlertController(title: "Oops!", message: "Make sure that you've entered both a destination and an address.", preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    func scrollUp(){
+        let topOffset = CGPoint(x: 0, y: 0)
+        self.scrollView.setContentOffset(topOffset, animated: true)
+    }
+    
+    func scrollDown(){
+        let bottomOffset = CGPoint(x: 0, y: self.scrollView.contentSize.height - self.scrollView.bounds.size.height)
+        self.scrollView.setContentOffset(bottomOffset, animated: true)
+    }
+    
+    
+    @IBAction func scrollUpButton(_ sender: Any) {
+        scrollUp()
+    }
+    
+    
+    @IBAction func scrollDownButton(_ sender: Any) {
+        scrollDown()
+    }
+    
+    
+    
+
+    
+    
+    
 }

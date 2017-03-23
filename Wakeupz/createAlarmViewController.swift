@@ -9,7 +9,8 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var earliestWakeupTime: UIDatePicker!
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var isOn: UISwitch!
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     var obligations: [Obligation] = []
     var obligationSelection = 0
     
@@ -116,8 +117,44 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         present(alertController, animated: true, completion: nil)
     }
    
-//    @IBAction func scrollDown(_ sender: UIButton) {
-//        self.view.bounds.setContentOffset(CGPoint(x: 100, y: 200), animated: true)
-//
-//    }
+    @IBAction func scrollUpButton(_ sender: Any) {
+        scrollUp()
+    }
+    
+  
+    @IBAction func scrollDownButton(_ sender: Any) {
+        scrollDown()
+    }
+    
+    func scrollUp(){
+        let topOffset = CGPoint(x: 0, y: 0)
+        self.scrollView.setContentOffset(topOffset, animated: true)
+    }
+    
+    func scrollDown(){
+        let bottomOffset = CGPoint(x: 0, y: self.scrollView.contentSize.height - self.scrollView.bounds.size.height)
+        self.scrollView.setContentOffset(bottomOffset, animated: true)
+    }
+    
+    
+    //TRY TO FIND A WAY TO CHECK PREVIOUS VIEW CONTROLLER
+    
+//        func backViewController() -> UIViewController? {
+//            if let stack = self.navigationController?.viewControllers {
+//                for i in (1..<stack.count).reversed() {
+//                    if(stack[i] == self) {
+//                        return stack[i-1]
+//                    }
+//                }
+//            }
+//            return nil
+//        }
+
 }
+
+
+
+
+
+
+

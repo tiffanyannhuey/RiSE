@@ -1,4 +1,5 @@
 import UIKit
+import UserNotifications
 
 
 class IndexTableViewController: UITableViewController {
@@ -11,12 +12,19 @@ class IndexTableViewController: UITableViewController {
         getData()
         self.tableView.reloadData()
 
+        // on load, request notifications from user 
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]){ (granted, error) in
+        }
+        
     }
     
     override func viewDidLoad() {
         self.showAlert()
         let navBar = view as? UINavigationBar
         navBar?.tintColor = UIColor.darkGray
+        
+        
     }
     
     func getData() {
@@ -46,6 +54,7 @@ class IndexTableViewController: UITableViewController {
             cell.placeLabel.text = alarms[indexPath.row].obligation?.name
         } else {
             cell.placeLabel.text = ""
+            cell.backgroundColor = UIColor(red: (97/255.0), green: (87/255.0), blue: (108/255.0), alpha: 1.0)
         }
         
         let dateFormatter = DateFormatter()
@@ -94,6 +103,8 @@ class IndexTableViewController: UITableViewController {
         present(alertController, animated: true, completion: nil)
         
     }
+    
+    
 
     
 }
