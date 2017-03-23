@@ -16,7 +16,7 @@ class CreateObligationViewController: UIViewController {
     @IBOutlet weak var newObligationName: UITextField!
     @IBOutlet weak var newAddress: UITextField!
     @IBOutlet weak var newDatePicker: UIDatePicker!
-    @IBOutlet weak var avgReadyDuration: UIDatePicker!
+    @IBOutlet weak var avgReadyDuration: UITextField!
     
     
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class CreateObligationViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         newDatePicker.setValue(UIColor.white, forKeyPath: "textColor")
-        avgReadyDuration.setValue(UIColor.white, forKeyPath: "textColor")
+     //   avgReadyDuration.setValue(UIColor.white, forKeyPath: "textColor")
     }
     
     func validateName() -> Bool {
@@ -45,7 +45,14 @@ class CreateObligationViewController: UIViewController {
             return true
         }
     }
-
+    
+    func validateCharacterLength() -> Bool {
+        if (avgReadyDuration.text?.characters.count)! > 12 {
+            return false
+        } else {
+            return true
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -55,20 +62,21 @@ class CreateObligationViewController: UIViewController {
     func setObligationValues() -> Bool {
         let obligation = NSEntityDescription.insertNewObject(forEntityName: "Obligation", into: self.context)
         
-        if validateName() && validateAddress() {
+        if validateName() && validateAddress() && validateCharacterLength() {
             obligation.setValue(newObligationName.text, forKey: "name")
             obligation.setValue(newAddress.text, forKey: "address")
             // set estimatedDrivingDuration value here
-            obligation.setValue(avgReadyDuration.countDownDuration, forKey: "avgReadyTime")
+            
+            let avgReadyDurationInt = Int(avgReadyDuration.text!)
+            obligation.setValue(avgReadyDurationInt, forKey: "avgReadyTime")
             obligation.setValue(newDatePicker.date, forKey: "idealArrivalTime")
             obligation.setValue(Date(), forKey: "createdAt")
             return true
         } else {
-            self.showAlert()
+            showAlert()
             return false
         }
     }
-    
     
     @IBAction func handleAddNewObligation(_ sender: UIButton) {
         if setObligationValues() {
@@ -86,9 +94,9 @@ class CreateObligationViewController: UIViewController {
     }
     
     @IBAction func showAlert() {
-        let alertController = UIAlertController(title: "Oops!", message: "Make sure that you've entered both a destination and an address.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Oops!", message: "Make sure that you've entered both a destination (max. 12 characters) and an address.", preferredStyle: .alert)
         
-        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil) 
         alertController.addAction(defaultAction)
         
         present(alertController, animated: true, completion: nil)

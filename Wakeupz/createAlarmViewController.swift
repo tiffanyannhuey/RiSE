@@ -11,6 +11,7 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var isOn: UISwitch!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    
     var obligations: [Obligation] = []
     var obligationSelection = 0
     
@@ -96,7 +97,7 @@ class createAlarmViewController: UIViewController, UIPickerViewDelegate, UIPicke
         alarm.setValue(obligationSelected, forKey: "obligation")
         alarm.setValue(Date(), forKey: "createdAt")
     }
-    
+
     
     @IBAction func handleAddNewAlarm(_ sender: UIButton) {
         setAlarmValues()
